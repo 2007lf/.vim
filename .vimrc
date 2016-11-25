@@ -1,7 +1,4 @@
 syntax on                   "语法高亮
-hi CursorLine                    guibg=#293739                                                                                                                                                                 
-hi CursorLineNr    guifg=#FD971F               gui=none
-"let g:molokai_original = 1
 "set number                  "显示行号
 set autoindent              "自动缩进
 filetype indent on
@@ -37,7 +34,7 @@ map <F2> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 "autocmd VimEnter * NERDTree "默认打开目录树
 
-"colorscheme molokai
+colorscheme molokai
 
 set nocompatible
 set t_Co=256
