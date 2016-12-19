@@ -1,3 +1,16 @@
+" vundle 环境设置
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+" vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/phd'
+" 插件列表结束
+call vundle#end()
+filetype plugin indent on
+
 syntax on                   "语法高亮
 "set number                  "显示行号
 set autoindent              "自动缩进
@@ -17,6 +30,9 @@ set hls                     "检索时高亮显示匹配项
 set incsearch               "随着搜索字符的逐个输入，实时进行字符串匹配
 set helplang=cn             "帮助系统设置为中文
 set foldmethod=syntax       "代码折叠
+autocmd BufWritePost $MYVIMRC source $MYVIMRC "更改实时生效
+set nocompatible "关闭兼容模式
+set wildmenu "vim 自身命令行模式智能补全
 
 "conf for tabs, 为标签页进行的配置，通过ctrl h/l切换标签等
 let mapleader = ',' 
@@ -36,7 +52,6 @@ let NERDTreeShowHidden=1
 
 colorscheme molokai
 
-set nocompatible
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 
