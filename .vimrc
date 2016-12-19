@@ -50,7 +50,10 @@ map <F2> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 "autocmd VimEnter * NERDTree "默认打开目录树
 
-colorscheme molokai
+set background=dark
+colorscheme solarized
+"colorscheme molokai
+"colorscheme phd
 
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
