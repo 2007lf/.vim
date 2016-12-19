@@ -1,3 +1,4 @@
+"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " vundle 环境设置
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
