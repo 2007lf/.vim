@@ -7,6 +7,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/phd'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'bogado/file-line'
+Plugin 'dyng/ctrlsf.vim'
+
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
@@ -35,24 +42,24 @@ set nocompatible "关闭兼容模式
 set wildmenu "vim 自身命令行模式智能补全
 
 "conf for tabs, 为标签页进行的配置，通过ctrl h/l切换标签等
-let mapleader = ',' 
-nnoremap <C-l> gt
-nnoremap <C-h> gT
-nnoremap <leader>t : tabe<CR>
+let mapleader = ';' 
+"nnoremap <C-l> gt
+"nnoremap <C-h> gT
+"nnoremap <leader>t : tabe<CR>
 
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j') "行间移动
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-call pathogen#infect()
 
 map <F2> :NERDTreeMirror<CR>
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 "autocmd VimEnter * NERDTree "默认打开目录树
+let NERDTreeAutoDeleteBuffer=1 " 删除文件时自动删除文件对应 buffer
+let NERDTreeMinimalUI=1 " NERDTree 子窗口中不显示冗余帮助信息
 
 set background=dark
-colorscheme solarized
-"colorscheme molokai
+"colorscheme solarized
+colorscheme molokai
 "colorscheme phd
 
 set t_Co=256
@@ -63,8 +70,13 @@ let Tlist_Exit_OnlyWindow = 1          "如果taglist是最后一个窗口，则
 let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist
 let Tlist_GainFocus_On_ToggleOpen = 1  "打开taglist时，光标保留在taglist窗口
 "let Tlist_Ctags_Cmd='/opt/local/bin/ctags'  "设置ctags命令的位置
-"nnoremap <leader>tl : Tlist<CR>        "设置关闭和打开taglist窗口的快捷键
+nnoremap <leader>tl : Tlist<CR>        "设置关闭和打开taglist窗口的快捷键
 
-set hidden
-"nnoremap <silent><C-l> :CtrlSpace<CR>
+set hidden " 允许在有未保存的修改时切换缓冲区，此时的修改由 vim 负责保存 
+
+" 显示/隐藏 MiniBufExplorer 窗口
+map <Leader>bl :MBEToggle<cr>
+" buffer 切换快捷键
+map <C-l> :MBEbn<cr>
+map <C-h> :MBEbp<cr>
 
