@@ -1,6 +1,7 @@
 "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim //or git://
 " vundle 环境设置
 filetype off
+let g:vundle_default_git_proto='git'
 set rtp+=~/.vim/bundle/Vundle.vim
 " vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
 call vundle#begin()
