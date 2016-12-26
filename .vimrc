@@ -1,4 +1,5 @@
 "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim //or git://
+":PluginInstall :PluginClean
 " vundle 环境设置
 filetype off
 let g:vundle_default_git_proto='git'
