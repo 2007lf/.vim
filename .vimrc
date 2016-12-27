@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
+"Plugin 'tomasr/molokai'
 "Plugin 'vim-scripts/phd'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
@@ -16,6 +16,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'bogado/file-line'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'dracula/vim'
 
 " 插件列表结束
 call vundle#end()
@@ -63,8 +64,9 @@ let NERDTreeMinimalUI=1 " NERDTree 子窗口中不显示冗余帮助信息
 
 set background=dark
 "colorscheme solarized
-colorscheme molokai
+colorscheme dracula
 "colorscheme phd
+"let g:solarized_termcolors=256
 
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
