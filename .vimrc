@@ -7,15 +7,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'tomasr/molokai'
-"Plugin 'vim-scripts/phd'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'vim-scripts/taglist.vim'
+"Plugin 'vim-scripts/taglist.vim'
 Plugin 'bogado/file-line'
-Plugin 'dyng/ctrlsf.vim'
+Plugin 'dyng/ctrlsf.vim' "搜索
 Plugin 'dracula/vim'
 
 " 插件列表结束
@@ -63,20 +60,17 @@ let NERDTreeAutoDeleteBuffer=1 " 删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1 " NERDTree 子窗口中不显示冗余帮助信息
 
 set background=dark
-"colorscheme solarized
 colorscheme dracula
-"colorscheme phd
-"let g:solarized_termcolors=256
 
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 
-let Tlist_Show_One_File = 1            "只显示当前文件的taglist，默认是显示多个
-let Tlist_Exit_OnlyWindow = 1          "如果taglist是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist
-let Tlist_GainFocus_On_ToggleOpen = 1  "打开taglist时，光标保留在taglist窗口
+"let Tlist_Show_One_File = 1            "只显示当前文件的taglist，默认是显示多个
+"let Tlist_Exit_OnlyWindow = 1          "如果taglist是最后一个窗口，则退出vim
+"let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist
+"let Tlist_GainFocus_On_ToggleOpen = 1  "打开taglist时，光标保留在taglist窗口
 "let Tlist_Ctags_Cmd='/opt/local/bin/ctags'  "设置ctags命令的位置
-nnoremap <leader>tl : Tlist<CR>        "设置关闭和打开taglist窗口的快捷键
+"nnoremap <leader>tl : Tlist<CR>        "设置关闭和打开taglist窗口的快捷键
 
 set hidden " 允许在有未保存的修改时切换缓冲区，此时的修改由 vim 负责保存 
 
