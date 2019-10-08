@@ -7,13 +7,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Lokaltog/vim-powerline'
+"Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 "Plugin 'vim-scripts/taglist.vim'
 Plugin 'bogado/file-line'
 Plugin 'dyng/ctrlsf.vim' "搜索
-Plugin 'dracula/vim'
+"Plugin 'dracula/vim'
 
 " 插件列表结束
 call vundle#end()
@@ -29,7 +31,7 @@ set laststatus=2            "总是显示状态行
 set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
 set shiftwidth=4
 set tabstop=4
-set cursorline              "为光标所在行加下划线
+"set cursorline              "为光标所在行加下划线
 set autoread                "文件在Vim之外修改过，自动重新读入
 set fileformats=unix,dos
 
@@ -39,9 +41,14 @@ set hls                     "检索时高亮显示匹配项
 set incsearch               "随着搜索字符的逐个输入，实时进行字符串匹配
 set helplang=cn             "帮助系统设置为中文
 set foldmethod=syntax       "代码折叠
+set foldlevelstart=99       "打开文件是默认不折叠代码
 autocmd BufWritePost $MYVIMRC source $MYVIMRC "更改实时生效
 set nocompatible "关闭兼容模式
 set wildmenu "vim 自身命令行模式智能补全
+"set mouse=a "鼠标模式
+
+let g:airline_theme='bubblegum'
+"let g:airline#extensions#tabline#enabled = 1
 
 "conf for tabs, 为标签页进行的配置，通过ctrl h/l切换标签等
 let mapleader = ';' 
@@ -60,10 +67,10 @@ let NERDTreeAutoDeleteBuffer=1 " 删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1 " NERDTree 子窗口中不显示冗余帮助信息
 
 set background=dark
-colorscheme dracula
+colorscheme desert
 
 set t_Co=256
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 "let Tlist_Show_One_File = 1            "只显示当前文件的taglist，默认是显示多个
 "let Tlist_Exit_OnlyWindow = 1          "如果taglist是最后一个窗口，则退出vim
